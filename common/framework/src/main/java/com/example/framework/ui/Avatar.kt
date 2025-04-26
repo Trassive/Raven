@@ -17,9 +17,10 @@ import coil3.request.crossfade
 fun Avatar(
     imageUrl: String,
     contentDes: String,
-    size: Dp
+    size: Dp,
+    modifier: Modifier = Modifier
 ) {
-    Box{
+    Box(modifier){
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(imageUrl)

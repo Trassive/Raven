@@ -2,7 +2,7 @@ package com.example.conversations.model
 
 
 data class Conversation(
-    val id: Int,
+    val id: String,
     val name: String,
     val messsage: String,
     val timeStamp: String,

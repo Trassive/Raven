@@ -79,7 +79,7 @@ fun Conversation(
 fun ConversationPreview(){
     Conversation(
         conversation = Conversation(
-            id = 1,
+            id = "1",
             name = "John Doe",
             messsage = "Hello son",
             timeStamp = "12:00",

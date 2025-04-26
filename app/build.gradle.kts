@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.example.raven"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.raven"
@@ -78,7 +78,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+    implementation(libs.workmanager)
     implementation(project(":feature:conversations"))
     implementation(project(":feature:create_chat"))
     implementation(project(":feature:chat"))

@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.conversations.model.Conversation
 
 @Composable
-fun ConversationList(list: List<Conversation>, onChatClick: (Int) -> Unit) {
+fun ConversationList(list: List<Conversation>, onChatClick: (String) -> Unit) {
     LazyColumn {
        items(list) { conversation ->
            Conversation(
@@ -23,7 +23,7 @@ fun ConversationListPreview() {
     ConversationList(
         list = listOf(
             Conversation(
-                id = 1,
+                id = "1",
                 name = "John Doe",
                 messsage = "Hello",
                 timeStamp = "12:00",

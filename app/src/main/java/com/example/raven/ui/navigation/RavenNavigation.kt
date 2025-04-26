@@ -7,11 +7,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navDeepLink
 import androidx.navigation.toRoute
-import com.example.chat.ChatScreen
+import com.example.chat.ui.ChatScreen
 import com.example.conversations.ConversationListScreen
 import com.example.create_chat.NewChatScreen
 import com.example.framework.navigation.Routes
-import com.example.framework.navigation.uri
+import com.example.framework.navigation.basePath
 
 @Composable
 fun AppNavigation(
@@ -43,7 +43,7 @@ fun NavGraphBuilder.addNewChat(navController: NavHostController) {
 fun NavGraphBuilder.addChat(navController: NavHostController) {
     composable<Routes.Chat>(
         deepLinks = listOf(
-            navDeepLink<Routes.Chat>("$uri/chat")
+            navDeepLink<Routes.Chat>("$basePath/chat")
         )
     ){ backStackEntry ->
         val chatId = backStackEntry.toRoute<Routes.Chat>().chatId
@@ -51,7 +51,8 @@ fun NavGraphBuilder.addChat(navController: NavHostController) {
             chatId = chatId,
             onBack = {
                 navController.popBackStack()
-            }
+            },
+            chatViewModel = TODO()
         )
     }
 }

@@ -1,27 +1,41 @@
 [versions]
 agp = "8.6.1"
+awsAndroidSdkS3 = "2.79.0"
 coilCompose = "3.1.0"
-kotlin = "2.0.20"
-coreKtx = "1.15.0"
+kotlin = "2.1.10"
+coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.10.0"
-composeBom = "2025.01.01"
+activityCompose = "1.10.1"
+composeBom = "2025.04.01"
 appcompat = "1.7.0"
 material = "1.12.0"
-hilt = "2.52"
+hilt = "2.55"
+roomCompiler = "2.5.0"
 serialization = "2.1.10"
-nav ="2.8.6"
-json = "1.7.3"
-runtimeAndroid = "1.7.7"
-material3Android = "1.3.1"
-uiTooling = "1.7.7"
-uiUnitAndroid = "1.7.7"
+nav ="2.8.9"
+json = "1.8.0"
+runtimeAndroid = "1.8.0"
+material3Android = "1.3.2"
+uiTooling = "1.8.0"
+uiUnitAndroid = "1.8.0"
+ksp = "2.1.10-1.0.30"
+ktor = "3.1.0"
+firebase = "4.4.2"
+firebase-bom = "33.13.0"
+kotlin-play-services = "1.10.1"
+firebaseFirestoreKtx = "25.1.4"
+room = "2.7.1"
+workmanager = "2.10.1"
+hilt-work = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-room-compiler-v250 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+aws-android-sdk-cognitoidentityprovider = { module = "com.amazonaws:aws-android-sdk-cognitoidentityprovider", version.ref = "awsAndroidSdkS3" }
+aws-android-sdk-s3 = { module = "com.amazonaws:aws-android-sdk-s3", version.ref = "awsAndroidSdkS3" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilCompose" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -47,6 +61,23 @@ androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 androidx-ui-unit-android = { group = "androidx.compose.ui", name = "ui-unit-android", version.ref = "uiUnitAndroid" }
+ktor-websockets = { group = "io.ktor", name = "ktor-client-websockets", version.ref = "ktor" }
+ktor-okHttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-content-negotiation = {group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
+workmanager = {  group = "androidx.work", name = "work-runtime-ktx", version.ref = "workmanager"}
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hilt-work" }
+
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+kotlinx-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlin-play-services" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -55,5 +86,5 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 android-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization"}
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
-
+firebase-plugin = {id = "com.google.gms.google-services", version.ref = "firebase" }
+ksp = {id = "com.google.devtools.ksp", version.ref= "ksp"}

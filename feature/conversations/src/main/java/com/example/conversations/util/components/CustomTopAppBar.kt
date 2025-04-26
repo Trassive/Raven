@@ -18,7 +18,7 @@ import com.example.conversations.util.Tab
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 fun CustomTopAppBar(
-    onChatClick: (Int) -> Unit,
+    onChatClick: (String) -> Unit,
     tabs: List<Tab>
 ) {
     Column{
@@ -33,7 +33,7 @@ fun CustomTopAppBar(
             tabs.forEachIndexed { index, tab ->
                 Tab(
                     selected = index == 0,
-                    onClick = { onChatClick(index) }
+                    onClick = { }
                 ) {
                     Text(
                         text = stringResource(tab.title),

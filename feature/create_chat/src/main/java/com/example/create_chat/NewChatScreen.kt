@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun NewChatScreen(
-    onChatCreated: (Int)->Unit,
+    onChatCreated: (String)->Unit,
     onBack: ()->Unit
 ){
 

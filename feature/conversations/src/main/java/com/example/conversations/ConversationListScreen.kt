@@ -25,7 +25,7 @@ import com.example.conversations.util.components.ConversationList
 @Composable
 fun ConversationListScreen(
     onNewChatClick: () -> Unit,
-    onChatClick: (Int) -> Unit
+    onChatClick: (String) -> Unit
 ){
     val pagerState = rememberPagerState(initialPage = 0){1}
     val index by remember{ mutableIntStateOf(1) }
