@@ -14,18 +14,16 @@ Raven is a modern Android chat app built with a clean, multi-module architecture
 ## Project Structure
 
 raven/
-├── app/                 # Entry point, theme, navigation graph
+├── app/								# Entry point, theme, navigation graph
 ├── feature/
-│   ├── conversation/    # List and select existing chats
-│   ├── chat/            # Shows the chat with a user
-│   └── create_chat/     # For starting new conversations
-└── common/              # Shared functionalities between other modules
+│   ├── conversation/		# List and select existing chats
+│   ├── chat/						# Shows the chat with a user
+│   └── create_chat/		# For starting new conversations
+└── common/							# Shared functionalities between other modules
 
 
 
-## Architecture Flow
 
-UI (Compose) → ViewModel → UseCase → Repository → DataSources (Room & Firestore)
 
 ---
 
