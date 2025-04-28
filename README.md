@@ -1,0 +1,34 @@
+# Raven – Android Chat Application
+
+Raven is a modern Android chat app built with a clean, multi-module architecture and Jetpack Compose. It offers real‑time messaging, online backup , and local persistence with Room.
+
+## Technology Stack
+- **Language**: Kotlin
+- **UI**: Jetpack Compose
+- **Architecture**: MVVM + Clean Architecture
+- **DI**: Hilt
+- **Local DB**: Room
+- **Realtime Cloud & Online Backup**: Firebase Firestore
+- **Navigation**: Jetpack Compose Navigation
+
+## Project Structure
+
+raven/
+├── `app/`  
+│   └── Entry point, theme, navigation graph  
+├── `feature/`  
+│   ├── `conversation/` – List and select existing chats 
+│   ├── `chat/` – Shows the chat with a user  
+│   └── `create_chat/` – For starting new conversations  
+── `common/` - Shared functionalities between other modules
+
+
+
+
+## Architecture Flow
+
+UI (Compose) → ViewModel → UseCase → Repository → DataSources (Room & Firestore)
+
+---
+
+Enjoy building with Raven!
